@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Estilos del sidenav */
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #333; /* Color de fondo del sidenav */
+            color: #fff; /* Color del texto del sidenav */
+            overflow-x: hidden;
+            padding-top: 20px;
+            transition: 0.5s; /* Agregamos una transición suave al expandir y contraer el sidenav */
+        }
+        
+        .sidenav a {
+            padding: 10px 16px; /* Aumentamos el padding para más espacio entre los enlaces */
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: 0.3s; /* Agregamos una transición suave al resaltar los enlaces */
+            font-family: "Arial", sans-serif; /* Nueva tipografía */
+        }
+        
+        .sidenav a:hover {
+            background-color: #555; /* Color de fondo al resaltar los enlaces */
+        }
+        
+        /* Estilos del contenido principal */
+        .main {
+            margin-left: 0; /* Eliminamos el margen izquierdo para que el contenido ocupe toda la pantalla */
+            padding: 20px;
+            transition: 0.5s; /* Agregamos una transición suave al expandir y contraer el contenido principal */
+        }
+        
+        /* Estilos del iframe */
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100vh;
+        }
+        
+        /* Estilos para el botón de mostrar/ocultar sidenav */
+        .openbtn {
+            position: fixed;
+            z-index: 1;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #333; /* Color de fondo del botón */
+            color: #fff; /* Color del texto del botón */
+            transition: 0.5s; /* Agregamos una transición suave al expandir y contraer el botón */
+        }
+        
+        .openbtn:hover {
+            background-color: #555; /* Color de fondo al resaltar el botón */
+        }
+        
+        /* Estilos para ocultar el sidenav */
+        .sidenav.hidden {
+            width: 0;
+            transition: 0.5s;
+        }
+        
+        .main.expanded {
+            margin-left: 250px; /* Aumentamos el margen izquierdo para que el panel ocupe más espacio */
+            transition: 0.5s;
+        }
+        
+        /* Estilos para ocultar el botón */
+        .openbtn.hidden {
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.5s;
+        }
+        
+        .main.expanded .openbtn {
+            opacity: 1;
+            pointer-events: auto;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="../index.php">Pagina principal</a>
+        <a href="#" onclick="cambiarIframe('../PHP/DisponibilidadVehiculos.php')">Vehículos</a>
+        <a href="#" onclick="cambiarIframe('../PHP/clientes.php')">Clientes</a>
+        <a href="#" onclick="cambiarIframe('../PHP/alquileres.php')">Historial de alquileres</a>
+        <a href="#" onclick="cambiarIframe('../PHP/administrador.php')">Alta de vehiculo</a>
+        <a href="#" onclick="cambiarIframe('bajaVehiculo.html')">Baja de vehiculo</a>
+        <a href="#" onclick="cambiarIframe('informacionVehiculo.html')">Información de vehiculo</a>
+        <a href="#" onclick="cambiarIframe('informacionCliente.html')">Información de cliente</a>
+        <a href="#" onclick="cambiarIframe('informacionParking.html')">Información del parking</a>
+        <a href="#" onclick="cambiarIframe('../PHP/averiados.php')">Baja Temporal</a>
+        <!-- Agrega más enlaces de navegación según tus necesidades -->
+    </div>
+    <div class="main">
+        <span class="openbtn" onclick="toggleNav()">&#9776;</span>
+        <iframe id="iframePrincipal" src="../PHP/DisponibilidadVehiculos.php"></iframe>
+    </div>
+
+    <script>
+        function toggleNav() {
+            var sidenav = document.getElementById("mySidenav");
+            var openbtn = document.querySelector(".openbtn");
+            var mainContent = document.querySelector(".main");
+
+            if (sidenav.style.width === "200px") {
+                sidenav.style.width = "0";
+                openbtn.style.marginLeft = "0";
+                mainContent.classList.remove("expanded");
+            } else {
+                sidenav.style.width = "200px";
+                openbtn.style.marginLeft = "200px";
+                mainContent.classList.add("expanded");
+            }
+        }
+
+        function cambiarIframe(url) {
+            document.getElementById('iframePrincipal').src = url;
+        }
+    </script>
+</body>
+</html>

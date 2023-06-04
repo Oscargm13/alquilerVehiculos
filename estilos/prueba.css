@@ -1,0 +1,33 @@
+/* Estilos para el contenedor */
+#contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Estilos para la caja de cada vehículo */
+.caja {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    width: 200px;
+}
+
+/* Estilos para la imagen de cada vehículo */
+.caja img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Estilos para el texto de cada vehículo */
+.caja p {
+    font-size: 14px;
+    color: #444;
+    margin: 5px 0;
+}

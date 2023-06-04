@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        #container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-image: url('../imagenes/huellas3.avif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        h1 {
+            text-align: center;
+            color: orangered;
+            font-size: 3em;
+        }
+
+        #enlaces {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid orangered;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(106, 180, 255, 0.5);
+            padding: 20px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: black;
+            font-size: 1.2em;
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s ease;
+            background-color: #fff;
+        }
+
+        a:hover {
+            background-color: orangered;
+            color: #fff;
+            font-weight: 600;
+        }
+        #panel {
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="panel">
+            <h1>Panel de administrador</h1>
+            <div id="enlaces">
+                <a href="../index.php"><-Volver a la pagina de inicio-></a>
+                <a href="../PHP/administrador.php" id="alta">Alta de vehiculo</a>
+                <a href="bajaVehiculo.html">Baja de vehiculo</a>
+                <a href="informacionVehiculo.html">Información de vehiculo</a>
+                <a href="informacionCliente.html">Información de cliente</a>
+                <a href="informacionParking.html">Información del parking</a>
+                <a href="../PHP/alquileres.php">Alquileres</a>
+                <a href="../PHP/DisponibilidadVehiculos.php">Vehiculos</a>
+                <a href="../PHP/averiados.php">Gestion bajas temporales</a>
+                <a href="../PHP/clientes.php">Clientes</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

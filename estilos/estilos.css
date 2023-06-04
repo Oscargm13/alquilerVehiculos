@@ -1,0 +1,167 @@
+/* Estilos para el encabezado */
+header {
+    width: 90%;
+    margin: auto;
+    background-color: #fff;
+    color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: #333 1px solid;
+    box-shadow: 0px 10px 5px -5px rgba(0,0,0,0.75);
+    margin-bottom: 10px;
+  }
+  
+  header h1 {
+    margin: 0 auto;
+    font-size: 2.7em;
+    margin-left: 43%;
+    text-align: center;
+  }
+  
+  header nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 auto;
+    margin-left: 10px;
+  }
+
+  header nav a:hover {
+    color: red;
+  }
+  
+  header nav a:first-of-type {
+    margin-left: 0;
+    width: 25%;
+  }
+  
+  /* Estilos para la barra de navegación */
+  .barra-navegacion {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin: auto;
+  }
+  
+  .barra-navegacion a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.3em;
+  }
+
+  .barra-navegacion a:hover {
+    color: red;
+  }
+
+  .carrusel {
+    position: relative;
+    width: 90%;
+    height: 700px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    overflow: hidden;
+    border-bottom: #333 1px solid;
+    box-shadow: 0px 10px 5px -5px rgba(0,0,0,0.75);
+  }
+
+  .contenedor-imagenes {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+  }
+  
+  .contenedor-imagenes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Estilos para el cuerpo */
+  main {
+    margin-top: 20px;
+  }
+  
+  main > div {
+    margin-bottom: 20px;
+  }
+  
+  main > div > div {
+    box-sizing: border-box;
+    padding: 10px;
+
+    align-items: center;
+  }
+  
+  .secciones {
+    width: 70%;
+    height: 210px;
+    margin: auto;
+  }
+
+  .seccion {
+    width: 30%;
+    height: 150px;
+    text-align: center;
+    float: left;
+    margin: 10px;
+    margin-bottom: 35px;
+  }
+
+  .seccion:hover {
+    width: 32%;
+  }
+
+  .seccion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    justify-content: flex-start;
+  }
+
+  main > div > div:first-of-type {
+    height: 600px;
+  }
+  
+  main > div > div:nth-of-type(1) {
+    background-color: #fff;
+  }
+  
+  main > div > div:nth-of-type(2) {
+    background-color: #fff;
+  }
+  
+  main > div > div:nth-of-type(3) {
+    background-color: orange;
+  }
+  
+  main > div > div:nth-of-type(4) {
+    background-color: yellow;
+  }
+  
+  /* Estilos para el pie de página */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+    margin: auto;
+    height: 80px;
+  }
+
+  footer nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  
+  footer nav a:first-of-type {
+    margin-left: 0;
+  }
